@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Indie+Flower);
+
+.masthead {
+	background: hsl(0, 0%, 20%);
+	min-height: 60px;
+}
+
+.site-title {
+	 	font-family: 'Yanone Kaffeesatz', sans-serif;
+		display: flex;
+		position: absolute;
+		left: 0;
+    margin: 0 0 1em;
+    padding: .4em 1em;
+    font-size: 1.5em;
+		color: hsl(0, 0%, 40%);
+}
+
+.login-bar {
+	 	font-family: 'Yanone Kaffeesatz', sans-serif;
+		float: right;
+		/*right: 40;*/
+    margin: 0 5em 1em;
+		text-decoration: none;
+    padding: .4em 1em;
+    font-size: 1.5em;
+		color: hsl(0, 0%, 40%);
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 52em;
+    }
+}
+
+/* Sidebar switcher buttons */
+
+@media screen and (max-width: 50em) {
+    /* Hide switcher on small screens */
+    .sidebar-switcher {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 50em) {
+
+	.sidebar-switcher {
+		position: absolute;
+		right: 0;
+		padding: .4em 1em;
+		color: hsl(0, 0%, 40%);
+	}
+
+	.sidebar-switcher a {
+		color: hsl(0, 0%, 40%);
+		padding-left: .4em;
+	}
+
+	.sidebar-switcher a:hover,
+	.sidebar-switcher a:focus {
+		color: hsl(0, 0%, 20%);
+	}
+}
+
+/* Flexbox stuff */
+
+@media screen and (min-width: 50em) {
+
+    .sidebar {
+        -webkit-flex: 0 0 12em;
+            -ms-flex: 0 0 12em;
+                flex: 0 0 20em;
+								margin: 2em;
+						 margin-right: 5em;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2;
+        transition: padding .5s ease, -webkit-flex .5s ease, color .2s ease-in .3s;
+        transition: padding .5s ease, -ms-flex .5s ease, color .2s ease-in .3s;
+        transition: padding .5s ease, flex .5s ease, color .2s ease-in .3s;
+    }
+
+    .sidebar-left {
+        -webkit-order: 0;
+            -ms-flex-order: 0;
+                order: 0;
+    }
+
+    .no-sidebar {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+	.hide {
+        -webkit-flex: 0 0 0;
+            -ms-flex: 0 0 0;
+                flex: 0 0 0;
+		padding: 0;
+        color: hsla(0, 0%, 0%, 0);
+        transition: color .2s ease, -webkit-flex .5s ease .3s, padding .5s ease .3s;
+        transition: color .2s ease, -ms-flex .5s ease .3s, padding .5s ease .3s;
+        transition: color .2s ease, flex .5s ease .3s, padding .5s ease .3s;
+	}
+
+    .hide a {
+        color: hsla(0, 0%, 0%, 0);
+    }
+
+}

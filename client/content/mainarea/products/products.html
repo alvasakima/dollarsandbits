@@ -1,0 +1,26 @@
+<template name="products">
+  <section class="cards">
+
+    {{#each productlist}}
+      {{> product}}
+    {{/each}}
+
+  </section>
+</template>
+
+<template name="product">
+  <article class="card">
+    <a href="#">
+      <picture class="thumbnail">
+        <img src="/{{thumb}}" alt="{{name}}">
+      </picture>
+      <div class="card-content">
+        <h2>{{bits price}}</h2>
+        <p>{{name}}</p>
+        <p>{{desc}}</p>
+        <input placeholder="Qty" class="input input-mini prodqty" value="0"/>
+          <a class="btn btn-success btn-mini addcart" href="#">Add</a>
+      </div>
+    </a>
+  </article>
+</template>

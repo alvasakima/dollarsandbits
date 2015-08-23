@@ -1,0 +1,51 @@
+<template name="cart">
+    <div class="page-header">
+        <h1>
+            <small>My Cart</small>
+        </h1>
+        Move Cart: <a href="#" class="sidebar-left-toggle">
+        <i class="fa fa-align-left"></i><span class="screen-reader-text">Move sidebar to the left</span></a>
+        <a href="#" class="sidebar-right-toggle"><i class="fa fa-align-right"></i><span class="screen-reader-text">Move sidebar to the right</span></a>
+        <a href="#" class="no-sidebar-toggle"><i class="fa fa-align-justify"></i><span class="screen-reader-text">Remove sidebar</span></a>
+        <a href="#" class="hide-sidebar-toggle"><i class="fa fa-arrow-circle-right"></i><span class="screen-reader-text">Remove sidebar</span></a>
+    </div>
+    <table class="span4 table table-striped table-bordered table-hover">
+        <thead>
+        <th>Qty</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th></th>
+        </thead>
+        <tbody>
+
+        {{#each cartitems}}
+        <tr>
+            <td>{{qty}}</td>
+            <td>{{productname}}</td>
+            <td>{{bits price}}</td>
+            <td><span class="label label-danger removeci">X</span></td>
+        </tr>
+        {{else}}
+        <tr>
+            <td colspan="3">No Products in Cart</td>
+        </tr>
+        {{/each}}
+
+        <tr>
+            <td class="totalcol" colspan="2">SubTotal:</td>
+            <td colspan="2">{{bits cartitems.subtotal}}</td>
+        </tr>
+
+        <tr>
+            <td class="totalcol" colspan="2">Tax 6%:</td>
+            <td colspan="2">{{bits cartitems.tax}}</td>
+        </tr>
+
+        <tr>
+            <td class="totalcol" colspan="2">Total:</td>
+            <td colspan="2">{{bits cartitems.total}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</template>

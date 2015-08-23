@@ -1,0 +1,16 @@
+
+td.totalcol{
+    text-align: right;
+}
+
+.sidebar {
+    -webkit-flex: 0 0 12em;
+        -ms-flex: 0 0 12em;
+            flex: 0 0 12em;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    transition: padding .5s ease, -webkit-flex .5s ease, color .2s ease-in .3s;
+    transition: padding .5s ease, -ms-flex .5s ease, color .2s ease-in .3s;
+    transition: padding .5s ease, flex .5s ease, color .2s ease-in .3s;
+}

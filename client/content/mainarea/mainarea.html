@@ -1,0 +1,87 @@
+<template name="mainarea">
+  <main class="main-area">
+    {{#if firstRun}}
+      {{> yield 'instructions'}}
+    {{else}}
+      {{> yield 'products'}}
+    {{/if}}
+  </main>
+</template>
+
+<template name="instructions">
+  <div class="jumbotron">
+    <h1>Welcome to Dollars And Bits!</h1>
+    <p>If you're a US citizen, every day for your entire life you have been bombarded with price signals denominated in dollars.
+      This is the reason if you happen to spot a gallon of milk selling for 10 dollars you know instantly
+      its overpriced. This site is intended to train your brain to think about prices in bitcoin. By the time
+      we're done a number like 546k bits will strike you as a smoking deal for a bicycle.</p>
+      <p>Lets get to it!</p>
+      <p>First things first..</p>
+      <p>Dollars are to cents as Bitcoins are to Satoshis</p>
+      <p>When looking at any bitcoin price, the amount after the decimal point is the amount of Satoshis. The only difference
+      is there are 8 decimal places instead of the 2 you're used to. This doesn't make it any harder to read, once you train
+    yourself to see the places. Its like going back to 3rd grade in a way.</p>
+      <p>Calculating bits is not difficult. Its a matter of moving the decimal point to make a large number more readable</p>
+      <table class="table table-striped">
+        <tr>
+          <td>1 Bitcoin</td>
+          <td>1.00000000</td>
+          <td>100M Satoshis</td>
+          <td>1.00000000</td>
+          <td>1M bits</td>
+          <td>1000000.00</td>
+
+        </tr>
+        <tr>
+          <td><em style="color:red;">.1</em> Bitcoin</td>
+          <td>0.10000000</td>
+          <td>100k bits</td>
+          <td>100,000.00</td>
+          <td>10M Satoshis</td>
+          <td>0.10000000</td>
+        </tr>
+        <tr>
+          <td>.01 Bitcoin</td>
+          <td>0.01000000</td>
+          <td>10k bits: </td>
+          <td>10,000.00</td>
+          <td>1M Satoshis</td>
+          <td>0.01000000</td>
+        </tr>
+        <tr>
+          <td>.001 Bitcoin</td>
+          <td>0.00100000</td>
+          <td>1k bits</td>
+          <td>1000.00</td>
+          <td>100k Satoshis</td>
+          <td>0.00100000</td>
+        </tr>
+        <tr>
+          <td>.0001 Bitcoin</td>
+          <td>0.00010000</td>
+          <td>100 bits</td>
+          <td>100.00</td>
+          <td>10k Satoshis</td>
+          <td>0.00010000</td>
+        </tr>
+        <tr>
+          <td>.00001 Bitcoin</td>
+          <td>0.00001000</td>
+          <td>10 bits</td>
+          <td>10.00</td>
+          <td>1k Satoshis</td>
+          <td>0.00001000</td>
+        </tr>
+        <tr>
+          <td>.000001 Bitcoin</td>
+          <td>0.00000100</td>
+          <td>1 bits</td>
+          <td>1.00</td>
+          <td>100 Satoshis</td>
+          <td>0.00000000</td>
+        </tr>
+      </table>
+
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  </div>
+</template>

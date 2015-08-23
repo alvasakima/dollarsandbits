@@ -1,0 +1,20 @@
+<template name="header">
+  <header class="masthead">
+    <div id="home" class="site-title">
+      <a href="/">dollarsAndBits</a>
+    </div>
+    <div class="login-bar">
+      {{> loginButtons}}
+    </div>
+  </header>
+  {{#if isCorrect}}
+  <div id="alertbar" class="alert alert-success alert-dismissible" role="alert">
+    Correct Answer!
+  </div>
+  {{/if}}
+  {{#if isNotCorrect}}
+  <div id="alertbar" class="alert alert-warning alert-dismissible" role="alert">
+    Nope, Try Again!
+  </div>
+  {{/if}}
+</template>

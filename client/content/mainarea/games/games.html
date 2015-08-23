@@ -1,0 +1,27 @@
+<template name="games">
+  <section class="gameitems">
+
+    {{#each gamelist}}
+      {{> game}}
+    {{/each}}
+
+  </section>
+</template>
+
+<template name="game">
+  <article class="gameitem">
+    <a href="#">
+      <picture class="thumbnail">
+        <img src="/{{thumb}}" alt="{{name}}">
+      </picture>
+      <div class="gameitem-content ">
+        <button id="button1" class="btn btn-default">{{bits price}}</button>
+        <button id="button2" class="btn btn-default">{{rando 2 10000}}</button>
+        <button id="button3" class="btn btn-default">{{rando 1 1000000}}</button>
+        <!-- <h2>{{currency price}}</h2>
+         <h2>{{bits price}}</h2>
+        <p>{{name}}</p>-->
+      </div>
+    </a>
+  </article>
+</template>

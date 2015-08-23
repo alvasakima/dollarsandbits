@@ -1,0 +1,8 @@
+.sidebar {
+	padding: .5em 1.4em 3em;
+  padding: inherit;
+	background: hsl(0, 0%, 90%);
+  margin-right: 2em;
+  width: 80px;
+  /*overflow: hidden;*/
+}
